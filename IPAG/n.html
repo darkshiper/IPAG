@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - IPAGH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Lora:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Resetando alguns estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Lora', serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Lora', serif;
+        }
+
+        .noticia {
+            display: flex;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+            flex-wrap: wrap; /* Garante que a imagem e o texto se ajustem em telas menores */
+        }
+
+        .noticia img {
+            max-width: 200px;
+            margin-right: 20px;
+            border-radius: 8px;
+            flex: 0 0 200px; /* Controla o tamanho da imagem */
+        }
+
+        .noticia .descricao {
+            flex: 1;
+        }
+
+        .noticia h3 {
+            font-size: 1.5rem;
+            color: #007BFF;
+            margin-bottom: 1rem;
+        }
+
+        .noticia p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .noticia {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .noticia img {
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .noticia h3 {
+                font-size: 1.3rem;
+            }
+
+            .noticia p {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .noticia h3 {
+                font-size: 1.2rem;
+            }
+
+            .noticia p {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Notícias - IPAG</h1>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <h2>Últimas Notícias</h2>
+
+        <!-- Notícia 1 -->
+        <div class="noticia">
+            <img src="R (1).jpg" alt="Notícia 1">
+            <div class="descricao">
+                <h3>Início das Aulas - 2º Semestre de 2024/2025</h3>
+                <p>Atenção a todos os alunos! As aulas do segundo semestre de 2024/2025 começam já em 6 de Janeiro, sendo que se vai estender até 17 de Abril. Todos os estudantes devem comparecer às suas aulas nos horários estipulados. Confira os detalhes no site da instituição ou entre em contato com a secretaria para mais informações.</p>
+            </div>
+        </div>
+
+        <!-- Notícia 2 -->
+        <div class="noticia">
+            <img src="apple_desktop-wallpaper-1280x800.jpg" alt="Notícia 2">
+            <div class="descricao">
+                <h3>Inscrições Abertas para o Curso de Gestão Empresarial</h3>
+                <p>O IPAG está com inscrições abertas para o novo curso de Gestão Empresarial. Este curso visa capacitar profissionais para enfrentar os desafios da administração moderna. As inscrições vão até o dia 10 de fevereiro de 2024. Não perca essa oportunidade!</p>
+            </div>
+        </div>
+
+        <!-- Notícia 3 -->
+        <div class="noticia">
+            <img src="IMG-20230811-WA0026-1000x600.jpg" alt="Notícia 3">
+            <div class="descricao">
+                <h3>Giramais - Novo Cartão de Benefícios</h3>
+                <p>O IPAG, em parceria com a Giramais, lança o novo cartão de benefícios para todos os alunos da instituição. Com o Giramais, os estudantes poderão acessar serviços de transporte. Inscreva-se já!!</p>
+            </div>
+        </div>
+
+        <!-- Notícia 4 -->
+        <div class="noticia">
+            <img src="keyboard_letter-wallpaper-1440x900.jpg" alt="Notícia 4">
+            <div class="descricao">
+                <h3>Festival de Cultura e Tecnologia 2024</h3>
+                <p>O IPAG organizará o Festival de Cultura e Tecnologia 2024, uma grande oportunidade para os alunos apresentarem seus projetos inovadores. O evento acontecerá nos dias 5 e 6 de março de 2024, no campus da instituição. Participe e mostre sua criatividade!</p>
+            </div>
+        </div>
+
+        <li><a href="index.html"><i class="fas fa-home"></i> Página inicial</a></li>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Instituto Politécnico de Administração e Gestão do Huambo. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

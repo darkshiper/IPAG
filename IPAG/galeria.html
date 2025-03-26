@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <style>
+        /* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Galeria de imagens */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.image-item {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-item:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para a imagem ampliada */
+.image-item.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    cursor: zoom-out;
+}
+
+/* Esconde outras imagens quando uma está ativa */
+.gallery img {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.gallery img.hidden {
+    opacity: 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 10px;
+    }
+
+    footer {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+
+    footer {
+        padding: 5px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minha Galeria de Imagens</h1>
+    </header>
+    
+    <div class="gallery">
+        <div class="image-item">
+            <img src="Imagem WhatsApp 2024-12-15 às 10.59.32_1f8a70a6.jpg" alt="Imagem 1" class="gallery-img">
+        </div>
+        <div class="image-item">
+            <img src="Imagem WhatsApp 2024-12-15 às 10.59.32_4325a927.jpg" alt="Imagem 2" class="gallery-img">
+        </div>
+        <div class="image-item">
+            <img src="Imagem WhatsApp 2024-12-15 às 10.59.33_8b255e1e.jpg" alt="Imagem 3" class="gallery-img">
+        </div>
+        <div class="image-item">
+            <img src="Imagem WhatsApp 2024-12-15 às 10.59.34_051c7acb.jpg" alt="Imagem 4" class="gallery-img">
+        </div>
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300" alt="Imagem 5" class="gallery-img">
+        </div>
+        <div class="image-item">
+            <img src="https://via.placeholder.com/300" alt="Imagem 6" class="gallery-img">
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Minha Galeria</p>
+    </footer>
+
+    <script src="imagens.js"></script>
+</body>
+</html>
